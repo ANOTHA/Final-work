@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+
+namespace final
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            var size = GetArraySizeFromUser();
+
+            var arr = GetRandomizedArray(size);
+
+            var evans = GetEvenNumbers(arr);
+
+            for (int i = evans.Lenght - 1; i >= 0; i--)
+            {
+                Console.Write(evans[i] + " ");
+            }
+
+            Console.ReadKey();
+
+
+        }
+
+        private static object GetEvenNumbers(int[] arr)
+        {
+            throw new NotImplementedException();
+        }
+
+        static int GetArraySizeFromUser()
+        {
+            Console.WriteLine("Write down size of array");
+            Console.ReadLine();
+            int size = 0;
+            var sizeAsText             while (int.TryParse(sizeAsText, out size))
+
+            {
+                Console.WriteLine("it's not a number");
+                Console.WriteLine("Write down size of array");
+                sizeAsText = Console.ReadLine();
+            }
+            return size;
+
+        }
+        static int[] GetRandomizedArray(int size)
+        {
+            var arr = new int[size];
+            var rd = new Random();
+            for (int i = 0; i < size; i++)
+            {
+                arr[i] = rd.Next(0, 100);
+            }
+
+            return arr;
+
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+}
